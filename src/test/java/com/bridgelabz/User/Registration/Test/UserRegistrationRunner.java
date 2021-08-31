@@ -10,5 +10,11 @@ public class UserRegistrationRunner {
 	public void checkFirstNameIsValidOrNot(){
 		assertEquals(true, UserRegistration.validateName("Karan"));
 	}
-
+	
+	public void checkLastNameIsValidOrNot(){
+		assertEquals(true, UserRegistration.validateName("Mehta"));
+		assertEquals(true, UserRegistration.validateName("Sharma"));
+	}
+	
+	
 }
