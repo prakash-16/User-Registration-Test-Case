@@ -19,4 +19,11 @@ public class UserRegistration {
 		return m.matches();
 	}
 
+	public static boolean validateMobileNumber(String mobileNumber) {
+		String mobileNumberRegex = "^(91)( )([7-9]{1})([0-9]{9})$";
+		Pattern p = Pattern.compile(mobileNumberRegex);
+		Matcher m = p.matcher(mobileNumber);
+		return m.matches();
+	}
+
 }

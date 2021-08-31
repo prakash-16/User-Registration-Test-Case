@@ -10,15 +10,19 @@ public class UserRegistrationRunner {
 	public void checkFirstNameIsValidOrNot(){
 		assertEquals(true, UserRegistration.validateName("Karan"));
 	}
-	
+	@Test
 	public void checkLastNameIsValidOrNot(){
 		assertEquals(true, UserRegistration.validateName("Mehta"));
 		assertEquals(true, UserRegistration.validateName("Sharma"));
 	}
-	
+	@Test
 	public void checkEmailIdIsValidOrNot() {
 		assertEquals(true, UserRegistration.validateEmail("abc@yahoo.com"));
 		assertEquals(true, UserRegistration.validateEmail("abc.xyz@bl.co.in"));
+	}
+	@Test
+	public void checkMobileNumberIsValidOrNot() {
+		assertEquals(true, UserRegistration.validateMobileNumber("91 9852637413"));
 	}
 	
 	
