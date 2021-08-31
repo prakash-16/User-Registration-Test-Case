@@ -24,6 +24,9 @@ public class UserRegistrationRunner {
 	public void checkMobileNumberIsValidOrNot() {
 		assertEquals(true, UserRegistration.validateMobileNumber("91 9852637413"));
 	}
-	
+	@Test
+	public void checkPasswordIsValidOrNot() {
+		assertEquals(true, UserRegistration.validatePassword("abcdefghi"));
+	}
 	
 }

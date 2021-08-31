@@ -25,5 +25,17 @@ public class UserRegistration {
 		Matcher m = p.matcher(mobileNumber);
 		return m.matches();
 	}
+	
+	public static boolean validatePassword(String password) {
+		if(password.length() >= 8) {
+			String passwordRegex = "^([a-z]{8,12})$";
+			Pattern p = Pattern.compile(passwordRegex);
+			Matcher m = p.matcher(password);
+			return m.matches();
+		}
+		else {
+			return false;
+		}
+	}
 
 }
