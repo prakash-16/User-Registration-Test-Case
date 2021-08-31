@@ -16,5 +16,10 @@ public class UserRegistrationRunner {
 		assertEquals(true, UserRegistration.validateName("Sharma"));
 	}
 	
+	public void checkEmailIdIsValidOrNot() {
+		assertEquals(true, UserRegistration.validateEmail("abc@yahoo.com"));
+		assertEquals(true, UserRegistration.validateEmail("abc.xyz@bl.co.in"));
+	}
+	
 	
 }
