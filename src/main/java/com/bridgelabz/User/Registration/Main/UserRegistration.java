@@ -13,7 +13,7 @@ public class UserRegistration {
 	}
 
 	public static boolean validateEmail(String email) {
-		String emailRegex = "^(([a-zA-Z]{3,8}\\.*[a-z]{0,8})+@([a-z]{2,8})+(\\.[a-z]{2,8}\\.*[a-z]{0,4}))$";
+		String emailRegex = "^(([a-zA-Z0-9]{3,8}\\.*\\-*[a-z0-9]{0,8})+@([a-z0-9]{1,8})+(\\.[a-z]{2,8}\\.*[a-z]{0,4}))$";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
 		return m.matches();
