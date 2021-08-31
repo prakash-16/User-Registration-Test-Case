@@ -28,7 +28,7 @@ public class UserRegistration {
 	
 	public static boolean validatePassword(String password) {
 		if(password.length() >= 8) {
-			String passwordRegex = "^([a-z]{8,12})$";
+			String passwordRegex = "^([A-Z]{1,12})([a-z]{1,12})$";
 			Pattern p = Pattern.compile(passwordRegex);
 			Matcher m = p.matcher(password);
 			return m.matches();
