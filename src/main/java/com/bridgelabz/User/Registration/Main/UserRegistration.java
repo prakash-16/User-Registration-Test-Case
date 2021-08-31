@@ -25,15 +25,14 @@ public class UserRegistration {
 		Matcher m = p.matcher(mobileNumber);
 		return m.matches();
 	}
-	
+
 	public static boolean validatePassword(String password) {
-		if(password.length() >= 8) {
-			String passwordRegex = "^([A-Z]{1,12})([a-z]{1,12})([0-9]{1,12})$";
+		if (password.length() >= 8) {
+			String passwordRegex = "^([A-Z]{1,12})([a-z]{1,12})([0-9]{1,12})([!@#$%^&*]{1})$";
 			Pattern p = Pattern.compile(passwordRegex);
 			Matcher m = p.matcher(password);
 			return m.matches();
-		}
-		else {
+		} else {
 			return false;
 		}
 	}

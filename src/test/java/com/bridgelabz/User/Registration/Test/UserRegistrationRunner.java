@@ -26,7 +26,7 @@ public class UserRegistrationRunner {
 	}
 	@Test
 	public void checkPasswordIsValidOrNot() {
-		assertEquals(true, UserRegistration.validatePassword("Qwerty16"));
+		assertEquals(true, UserRegistration.validatePassword("Qwerty16@"));
 	}
 	
 }
